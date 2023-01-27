@@ -15,8 +15,7 @@ struct maxlenftn {
 int main() {
 	vector<string> names{ "Smith", "Jones", "Johnson", "Grant" };
 	maxlenftn maxf;
-	for_each(names.begin(), names.end(), maxf) {
-		cout << maxf.maxlen << endl;
-	}
+	for_each(names.begin(), names.end(), maxf);
+	cout << maxf.maxlen << endl;
 	return 0;
 }
