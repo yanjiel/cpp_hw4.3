@@ -5,12 +5,14 @@
 using namespace std;
 
 struct maxlenftn {
-	maxlenftn() { maxlen = 0; }
+	maxlenftn() { /*maxlen = 0;*/}
 	void operator()(string s) {
 		maxlen = max(maxlen, s.size());
 	}
-	string::size_type maxlen;
+	static string::size_type maxlen;
 };
+
+string::size_type maxlenftn::maxlen = 0;
 
 int main() {
 	vector<string> names{ "Smith", "Jones", "Johnson", "Grant" };
